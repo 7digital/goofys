@@ -6,5 +6,6 @@ install:
 - go get -t $(go list ./... | grep -v /vendor/)
 - mkdir /tmp/mnt
 - make build
+- tree
 go:
   - 1.11.5
