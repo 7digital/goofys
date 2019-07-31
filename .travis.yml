@@ -1,7 +1,7 @@
 language: go
 sudo: required
 dist: xenial
-env:
+env: 
 install:
 - go get -t $(go list ./... | grep -v /vendor/)
 - mkdir /tmp/mnt
@@ -9,4 +9,11 @@ install:
 - sudo apt-get update && sudo apt-get install tree
 - tree
 go:
-  - 1.11.5
+- 1.11.5
+deploy:
+  provider: releases
+  api_key:
+    secure: nG9tw09Hgz22cJAwPRzdpok8K9Vku1CSPlRWIQW6nYMuNPHtUqjnAaJzxZYGyxwfqzg2b5Du9snHCVS4ZA86ONwPGgdPz6LZ0Nmtzr8ySPVQi7RkfmuYZmjZfaEII3ujls4yxZDUSNyP4ps6o9tidRaqAPwI4zCvrX2sG+4yk25n2MAkS/DwMoJ7geF4WC5orrHZCoY8SaWEnBWwOT+XyACURTs+PCVq8SGXm+O5hq+ztQWcWlF2ppjytgaXb/skFrwt0erAQaTuKBqYmb1YOQh37/dB5g4rA4tKbSecfMWxcLKDu/TiD/ND85Qz/G+9ik0LV6NR4sZn04ky1WiRsHeqLqtffR5TnwePUkF3dV8KoXjnamGiESewjb5flhO0T0Pnzqs1qlUO6DzmfQ980TVWr1Lqi7XlQ7pKWzKlXN3eq7a3x1eXnu44hDpYuu/Le5GduZ+rLceyeG8goXv5rgzQOrVGLrzmaQoquEBChtJmXCtRObm1w4brWoj3+HPbFBZ2JSou4DYf6F7CY3A7ZoTriUWd9aQGHMv/5ocyvguUxVKitj1onO8E2cREEYXcjI3vwQe+TqQFwrp088cuu6n8GsOsvFVkQa1idU3tq+R40VbiLl2t5JvIMuKOxpQGIn9aHYAnzylfPAm950rAFJb4uZVWgpk0Ve+COJqpris=
+  file: goofys
+  on:
+    repo: 7digital/goofys
