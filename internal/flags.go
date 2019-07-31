@@ -428,7 +428,7 @@ func PopulateFlags(c *cli.Context) (ret *FlagStorage) {
 			if ee, ok := err.(*exec.Error); ok {
 				io.WriteString(cli.ErrWriter,
 					fmt.Sprintf("--cache requires catfs (%v) but %v\n\n",
-						"http://github.com/7digital/catfs",
+						"http://github.com/kahing/catfs",
 						ee.Error()))
 			} else if ee, ok := err.(*exec.ExitError); ok {
 				io.WriteString(cli.ErrWriter,
