@@ -45,7 +45,7 @@ import (
 	"github.com/Azure/azure-storage-blob-go/azblob"
 	azureauth "github.com/Azure/go-autorest/autorest/azure/auth"
 
-	"github.com/7digital/go-xattr"
+	"github.com/kahing/go-xattr"
 
 	"github.com/jacobsa/fuse"
 	"github.com/jacobsa/fuse/fuseops"
