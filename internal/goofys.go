@@ -15,7 +15,7 @@
 package internal
 
 import (
-	. "github.com/kahing/goofys/api/common"
+	. "github.com/7digital/goofys/api/common"
 
 	"context"
 	"fmt"
@@ -844,7 +844,7 @@ func (fs *Goofys) SyncFile(
 	op *fuseops.SyncFileOp) (err error) {
 
 	// intentionally ignored, so that write()/sync()/write() works
-	// see https://github.com/kahing/goofys/issues/154
+	// see https://github.com/7digital/goofys/issues/154
 	return
 }
 
